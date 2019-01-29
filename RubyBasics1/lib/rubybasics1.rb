@@ -11,7 +11,31 @@ end
 
 # Part II
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.length == 0
+    return 0
+  end
+  if arr.length == 1
+    return arr[0]
+  end
+  
+  largest = arr[1]
+  seclargest = arr[2]
+  
+  for value in arr do
+      if value > largest
+          largest = value
+      end
+  end
+  
+  for sec in arr do
+      if sec != largest
+          if sec > seclargest
+              seclargest = sec
+          end
+      end
+  end
+  
+  return largest + seclargest
 end
 
 # Part III
