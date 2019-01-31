@@ -32,4 +32,16 @@ end
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
+    if contacts.keys.size == 0 || contacts == nil
+        return [[], [], []]
+    end
+    keys = contacts.keys
+    l = contacts.length
+    hold = Array.new(3){Array.new(l)}
+    for i in 0..l-1
+    hold[0][i] = contacts[keys[i]][:email]
+    hold[1][i] = contacts[keys[i]][:phone]
+    hold[2][i] = keys[i].to_s
+    end
+    return hold
 end
