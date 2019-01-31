@@ -40,5 +40,21 @@ end
 
 # Part III
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  if arr.length == 0
+    return false
+  end
+  if arr.length == 1
+    return false
+  end
+  for outer in arr
+    for inner in arr
+      if outer != inner
+        hold = outer + inner
+      end
+      if hold == n
+        return true
+      end
+    end
+  end
+  return false
 end
