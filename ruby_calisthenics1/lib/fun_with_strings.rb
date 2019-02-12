@@ -20,10 +20,10 @@ module FunWithStrings
   end
   def anagram_groups
     # your code here
-    if(self.length == 0)
-      return []
-    end
+    return self.downcase().split(" ").group_by{|str| str.chars.sort }.values
   end
+  
+  
 end
 
 # make all the above functions available as instance methods on Strings:
