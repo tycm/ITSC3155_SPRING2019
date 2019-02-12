@@ -1,6 +1,11 @@
 module FunWithStrings
   def palindrome?
-    # your code here
+    lower = self.downcase().gsub(/[^a-zA-Z]/, "")
+    rever = self.reverse().downcase().gsub(/[^a-zA-Z]/, "")
+    if lower == rever
+      return true
+    end
+    return false
   end
   def count_words
     # your code here
