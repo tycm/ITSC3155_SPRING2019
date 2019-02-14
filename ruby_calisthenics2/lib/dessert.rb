@@ -29,4 +29,8 @@ class JellyBean < Dessert
     @name = flavor + " jelly bean"
   end
   attr_accessor :flavor
+  def delicious?
+    # your code here
+    return (self.flavor != 'licorice')
+  end
 end
