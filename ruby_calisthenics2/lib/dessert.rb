@@ -9,9 +9,14 @@ class Dessert
   attr_accessor :calories
   def healthy?
     # your code here
+    if (self.calories > 200)
+      return false
+    end
+    return true
   end
   def delicious?
     # your code here
+    return true
   end
 end
 
