@@ -23,6 +23,7 @@ end
 
 # Part III
 def binary_multiple_of_4? s
+
   # YOUR CODE HERE
   if(/[a-z]/.match(s) || s.length == 0)
     return false
