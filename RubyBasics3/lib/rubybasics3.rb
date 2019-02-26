@@ -10,4 +10,8 @@ class BookInStock
     end
     attr_accessor :isbn
     attr_accessor :price
+    
+    def price_as_string
+        return '$%.2f' % @price
+    end
 end
